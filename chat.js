@@ -34,10 +34,10 @@ ifUserIsLoggedIn(function () {
     });
 
     click("send-button", function() {
-        var text = getElement("message-text").value;
+        var text = getElement("message-text");
         var chat_id = getElement("chat-id").value;
-        sendMessage(chat_id, text);
-        text = "";
+        sendMessage(chat_id, text.value);
+        text.value = "";
 
     });
 
