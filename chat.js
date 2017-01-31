@@ -36,8 +36,8 @@ ifUserIsLoggedIn(function () {
     click("send-button", function() {
         var text = getElement("message-text").value;
         var chat_id = getElement("chat-id").value;
-
         sendMessage(chat_id, text);
+        text = "";
 
     });
 
